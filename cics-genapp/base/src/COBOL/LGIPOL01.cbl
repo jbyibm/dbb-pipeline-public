@@ -17,6 +17,7 @@
       *  Business logic for policy inquire                             *
       *   To obtain full details of an individual policy:              *
       *     Endowment, House or Motor  NJL   v6                        *
+      *                                                                *
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LGIPOL01.
