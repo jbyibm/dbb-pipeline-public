@@ -17,6 +17,7 @@
       *   To add customer's password to the secutity table with        *
       *  details. Default password is BD5 checksum                     *
       *                                                                *
+      *                                                                *
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LGACDB02.
