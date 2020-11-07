@@ -154,7 +154,8 @@ pipeline {
                     }
                     zUnitContents.each { zUnitContent ->
                         writeFile file: '/tmp/zUnit.zunit', text:zUnitContent
-                        sh "xsltproc /home/ibmadmin/xslt/AZUZ2J30.xsl /tmp/zUnit.zunit > ${WORKSPACE}/zUnit.xml"
+                        sh "curl --silent https://raw.githubusercontent.com/jbyibm/dbb-pipeline-public/master/cics-genapp/zUnit/xsl/AZUZ2J30.xsl -o /tmp/AZU_Z2J30.xsl"
+                        sh "xsltproc /tmp/AZUZ2J30.xsl /tmp/zUnit.zunit > ${WORKSPACE}/zUnit.xml"
                         junit "zUnit.xml"
                     }
                 }
