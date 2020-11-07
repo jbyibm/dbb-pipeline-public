@@ -156,7 +156,7 @@ pipeline {
                         writeFile file: '/tmp/zUnit.zunit', text:zUnitContent
                         sh "curl --silent https://raw.githubusercontent.com/jbyibm/dbb-pipeline-public/master/cics-genapp/zUnit/xsl/AZUZ2J30.xsl -o /tmp/AZUZ2J30.xsl"
                         sh "xsltproc /tmp/AZUZ2J30.xsl /tmp/zUnit.zunit > ${WORKSPACE}/zUnit.xml"
-                        junit "zUnit.xml"
+                        //junit "zUnit.xml"
                     }
                 }
             }
